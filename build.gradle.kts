@@ -2,6 +2,7 @@ import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 plugins {
     kotlin("jvm") version "1.5.30"
+    kotlin("plugin.serialization") version "1.5.30"
 }
 
 group = "ru.ezhov"
@@ -12,7 +13,10 @@ repositories {
 }
 
 dependencies {
+    implementation("io.github.microutils:kotlin-logging-jvm:2.0.10")
     implementation("io.arrow-kt:arrow-core:0.13.2")
+    implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.2.2")
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.5.2")
 
     testImplementation(kotlin("test"))
 }
