@@ -4,7 +4,7 @@ plugins {
     id("application")
     id("org.openjfx.javafxplugin") version "0.0.8"
 
-    kotlin("jvm") version "1.7.10"
+    kotlin("jvm") version "1.7.20"
 }
 
 group = "ru.ezhov"
@@ -40,6 +40,9 @@ dependencies {
     implementation("com.fasterxml.jackson.core:jackson-databind:2.13.3")
     implementation("com.fasterxml.jackson.module:jackson-module-kotlin:2.13.3")
     implementation("com.fasterxml.jackson.dataformat:jackson-dataformat-yaml:2.13.3")
+
+    // https://repo1.maven.org/maven2/net/sourceforge/plantuml/plantuml/1.2022.8/
+    implementation("net.sourceforge.plantuml:plantuml:1.2022.8")
 
     testImplementation(kotlin("test"))
 }
