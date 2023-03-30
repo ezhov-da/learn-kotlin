@@ -44,6 +44,11 @@ dependencies {
     // https://repo1.maven.org/maven2/net/sourceforge/plantuml/plantuml/1.2022.8/
     implementation("net.sourceforge.plantuml:plantuml:1.2022.8")
 
+
+    implementation("org.apache.lucene:lucene-core:7.1.0")
+    implementation("org.apache.lucene:lucene-queryparser:7.1.0")
+    implementation("org.apache.lucene:lucene-analyzers-common:7.1.0")
+
     testImplementation(kotlin("test"))
 }
 
