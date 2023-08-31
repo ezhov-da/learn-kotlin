@@ -41,9 +41,9 @@ dependencies {
     implementation("com.fasterxml.jackson.module:jackson-module-kotlin:2.13.3")
     implementation("com.fasterxml.jackson.dataformat:jackson-dataformat-yaml:2.13.3")
 
-    // https://repo1.maven.org/maven2/net/sourceforge/plantuml/plantuml/1.2022.8/
     implementation("net.sourceforge.plantuml:plantuml:1.2022.8")
 
+    implementation("com.github.spullara.mustache.java:compiler:0.9.10")
 
     implementation("org.apache.lucene:lucene-core:7.1.0")
     implementation("org.apache.lucene:lucene-queryparser:7.1.0")
