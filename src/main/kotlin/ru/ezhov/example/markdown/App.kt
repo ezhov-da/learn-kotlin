@@ -18,7 +18,11 @@ fun main() {
 
     textFile = File("").readText()
 
-    val paragraphs = textFile.split("\n").filter { it.startsWith("#") }
+    println(getContents(textFile))
+}
+
+private fun getContents(inputText: String): String {
+    val paragraphs = inputText.split("\n").filter { it.startsWith("#") }
     /*
     # Test <a name="again"></a>
     # Test Hello bkb rfr nfv <a name="again"></a>
@@ -45,7 +49,5 @@ fun main() {
         "\t".repeat(symbols.length - 1) + "- " + menuText
     }
 
-    val resultText = result.joinToString(separator = "\n")
-
-    println(resultText)
+    return result.joinToString(separator = "\n")
 }
