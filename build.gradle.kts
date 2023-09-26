@@ -20,9 +20,12 @@ repositories {
     maven {
         url = uri("https://packages.atlassian.com/maven/repository/public")
     }
+    maven("https://jitpack.io")
 }
 
 dependencies {
+    implementation("com.github.kotlinx.ast:grammar-kotlin-parser-antlr-kotlin:0.1.0")
+
     implementation("no.tornado:tornadofx:1.7.20")
 
     implementation("io.github.microutils:kotlin-logging-jvm:2.0.10")
