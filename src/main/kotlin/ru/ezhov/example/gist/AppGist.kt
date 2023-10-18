@@ -4,6 +4,17 @@ import java.io.File
 
 fun main() {
     val file = File("C:\\Users\\DEzhov\\gists-test\\gist для обработки")
+    val systemLineSeparator = System.getProperty("line.separator")
+    file.walk().iterator().forEach { f ->
+        if (f.isFile) {
+            val text = f.readText() + systemLineSeparator + systemLineSeparator + "[[gist]]"
+            f.writeText(text)
+        }
+    }
+}
+
+private fun replaceCode() {
+    val file = File("C:\\Users\\DEzhov\\gists-test\\gist для обработки")
 
     val codeStartRegEx = "^(\\[code:\\])(\\w+)(\\[:code\\])\$".toRegex()
     val codeEndRegEx = "^\\[\\/code\\]\$".toRegex()
