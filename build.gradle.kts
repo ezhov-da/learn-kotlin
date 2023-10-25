@@ -28,6 +28,9 @@ dependencies {
 
     implementation("no.tornado:tornadofx:1.7.20")
 
+    implementation("org.commonmark:commonmark:0.20.0")
+    implementation("org.commonmark:commonmark-ext-gfm-tables:0.20.0")
+
     implementation("io.github.microutils:kotlin-logging-jvm:2.0.10")
 
     implementation("com.atlassian.jira:jira-rest-java-client-core:5.2.4")
