@@ -1,19 +1,18 @@
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 plugins {
+    kotlin("jvm") version "1.9.20"
     id("application")
-    id("org.openjfx.javafxplugin") version "0.0.8"
-
-    kotlin("jvm") version "1.7.20"
+//    id("org.openjfx.javafxplugin") version "0.0.8"
 }
 
 group = "ru.ezhov"
 version = "1.0-SNAPSHOT"
 
-javafx {
-    version = "11.0.2"
-    modules = listOf("javafx.controls", "javafx.graphics")
-}
+//javafx {
+//    version = "11.0.2"
+//    modules = listOf("javafx.controls", "javafx.graphics")
+//}
 
 repositories {
     mavenCentral()
@@ -24,9 +23,11 @@ repositories {
 }
 
 dependencies {
+    implementation("org.apache.tika:tika-core:2.9.1")
+
     implementation("com.github.kotlinx.ast:grammar-kotlin-parser-antlr-kotlin:0.1.0")
 
-    implementation("no.tornado:tornadofx:1.7.20")
+//    implementation("no.tornado:tornadofx:1.7.20")
 
     implementation("org.commonmark:commonmark:0.20.0")
     implementation("org.commonmark:commonmark-ext-gfm-tables:0.20.0")
@@ -63,5 +64,5 @@ tasks.test {
 }
 
 tasks.withType<KotlinCompile>() {
-    kotlinOptions.jvmTarget = "11"
+    kotlinOptions.jvmTarget = "17"
 }
