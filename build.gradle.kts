@@ -56,6 +56,8 @@ dependencies {
     implementation("org.apache.lucene:lucene-queryparser:7.1.0")
     implementation("org.apache.lucene:lucene-analyzers-common:7.1.0")
 
+    implementation("org.apache.commons:commons-lang3:3.17.0")
+
     testImplementation(kotlin("test"))
 }
 
