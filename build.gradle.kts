@@ -59,6 +59,9 @@ dependencies {
     implementation("org.apache.commons:commons-lang3:3.17.0")
 
     testImplementation(kotlin("test"))
+    testImplementation("org.junit.jupiter:junit-jupiter:5.11.3")
+    testImplementation("org.assertj:assertj-core:3.26.3")
+
 }
 
 tasks.test {
